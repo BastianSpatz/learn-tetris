@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "learn-tetris"
+version = "0.1.0"
+description = ""
+authors = ["BastianSpatz <spatz.bastian@mnet-mail.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyboy = "^2.3.0"
+gymnasium = "^0.29.1"
+stable-baselines3 = "^2.3.2"
+torch = {version = "^2.4.1+cu124", source = "pytorch-gpu-src"}
+pre-commit = "^3.8.0"
+
+[[tool.poetry.source]]
+name = "pytorch-gpu-src"
+url = "https://download.pytorch.org/whl/cu124"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
